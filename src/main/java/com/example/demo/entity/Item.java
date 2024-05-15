@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "items")
@@ -15,8 +16,13 @@ public class Item {
 	private Integer id;
 	@Column(name = "category_id")
 	private Integer categoryId;
+
 	private String name;
+
 	private Integer price;
+
+	@Transient
+	private Integer quantity;
 
 	public Integer getId() {
 		return id;
@@ -32,6 +38,14 @@ public class Item {
 
 	public Integer getPrice() {
 		return price;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 }
