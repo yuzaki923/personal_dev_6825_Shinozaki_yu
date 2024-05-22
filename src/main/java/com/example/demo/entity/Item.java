@@ -21,6 +21,10 @@ public class Item {
 
 	private Integer price;
 
+	private String photo;
+
+	private String comm;
+
 	@Transient
 	private Integer quantity;
 
@@ -40,12 +44,20 @@ public class Item {
 		return price;
 	}
 
+	public String getPhoto() {
+		return photo;
+	}
+
 	public Integer getQuantity() {
 		return quantity;
 	}
 
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
+	}
+
+	public String getComm() {
+		return comm;
 	}
 
 }

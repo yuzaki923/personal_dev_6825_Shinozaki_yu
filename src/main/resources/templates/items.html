@@ -2,19 +2,73 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ショッピングメニュー</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+		
+<div class="bg_pattern Polka_v2"></div>
+	<h1>ようこそ！<span th:text="${@account.name}+' さん！'"></span></h1>
 	<header th:replace="header"></header>
 	<hr>
 	<main>
+		<div class="cp_breadcrumb">
+	<ul class="breadcrumbs">
+	<li><a href="/items">Home</a></li>
+	<li><a href="/PurchaseHistory">購入履歴</a></li>
+	<li><a href="/cart">カートの中身を見る</a></li>
+	<li>Contents</li>
+	</ul>
+</div>
 		<table>
 			<tr>
 				<th>NO</th>
+				<th></th>
+				<th>なぜよかったのか</th>
 				<th>商品名</th>
 				<th>値段</th>
 				<th></th>
 			</tr>
-			<tr th:text>
+			<tr th:each="item:${items}">
+				<td th:text="${item.id}"></td>
+				<td><img th:src="${item.photo}"></td>
+				<td th:utext="${item.comm}"></td>
+				<td th:text="${item.name}"></td>
+				<td th:text="${item.price}"></td>
+				<td>
+					<form action="/cart/add" method="post">
+					<input type="hidden" name="itemId" th:value="${item.id}">
+					<button href="" class="btn_18">カートに追加</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+		<form action="/quiz1" method="get">
+			<button class="fixed-div">
+<p>クイズに答えて</p>
+<p>買わなきゃよかったリストへ</p>
+</button>
+</form>
+	</main>
+	<hr>
+	
+	<footer th:replace="footer"></footer>
+	<div class="cp_cssslider">
+	<div class="cp_slidewrapper">
+		<div class="cp_slide_item"><img src="ダウンロード.jpg"></div>
+		<div class="cp_slide_item"><img src="910InuA1PIL.jpg" style="width: 300px;"></div>
+		<div class="cp_slide_item"><img src="709892.jpg" style="width: 300px;"></div>
+		<div class="cp_slide_item"><img src="images.jpg" style="width: 300px;"></div>
+		<div class="cp_slide_item"><img src="20231124-273294-header2.jpg" style="width: 300px;"></div>
+	</div>
+</div>
+
+<div class="right">
+	<img src="typhroywi2zusbl1716280448.png">
+	</div>
+<div class="box">
+<span class="text"><h2>龍が如く</h2></span>
+</div>
+
 </body>
 </html>

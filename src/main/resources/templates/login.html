@@ -7,13 +7,43 @@
 </head>
 <body>
 	<header>
-		<h1>ショッピング</h1>
+		<h1>篠崎優の今年一年買ってよかったものショップ</h1>
 	</header>
 	<main>
-		<form action="/login" method="post">
-			<input type="text" name="name" placeholder="名前">
-			<button>ログイン</button>
-			<br><span th:text="${message}" style="color: red"></span>
+		<h3>ここは、私が約一年間で買ってよかったもの、感動したものがそろっているショップです。<br>
+			万が一気になって買ってみて、「こんなゴミよくも紹介しやがって！」
+			となっても責任は負いかねますので悪しからず。<br>
+			あくまで主観ですので、それでも良い方はぜひ覗いてみてください
+		</h3>
+		<h4>＊なお買ってみてとは、サービスの提供を受けることも含まれています。</h4>
+		<form action>
+			<a href="/account" class="btn_21"method="get">新規登録の方はこちら！</a><br>
 		</form>
+			
+		<form action>
+			<a href="/form" class="btn_21" method="get">
+			すでに会員登録がお済の方はこちら！</a><br>	
+			  <style>
+				  
+    .right{
+      text-align: right;
+    }
+    .center{
+      text-align: center;
+    }
+
+  </style>  
+			
+<div class="left">
+  <img src="img_20230805_150150-removebg-preview.png">
+</div>
+<div class="right">
+	<img src="img_20230805_150152-removebg-preview.png">
+	</div>
+	<p class="samplew">
+	<img src="/--unscreen.gif">
+	</p>
+		</form>
+	</main>
 </body>
 </html>

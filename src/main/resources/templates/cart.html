@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>カート</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<h1>ようこそ！<span th:text="${@account.name}+' さん！'"></span></h1>
+		<header th:replace="header"></header>
+	<hr><a href="/items">一つ戻る</a>
+	<main>
+		<div class="cp_breadcrumb">
+	<ul class="breadcrumbs">
+	<li><a href="/items">Home</a></li>
+	<li><a href="#">Help</a></li>
+	<li><a href="#">お問い合わせ</a></li>
+	<li>Contents</li>
+	</ul>
+</div>
+
+		<span th:replace="cartItem"></span>
+		<form action="/cart/clear" method="get">
+		<button class="btn_23">カートの中身をすべて削除</button>
+		</form>
+		<form action="/order" method="get">
+			<button class="btn_22">注文する</bottun>
+		</form>
+	</main>
+	<main>
+		<form action="/items" methods="get">
+			<button class="btn_22">追加</bottun>
+		</form>
+					
+<div class="right">
+  <img src="img20200118192938-removebg-preview.png">
+</div>
+	</main>
+	<hr>
+	<footer th:replace="footer"></footer>
+</body>
+</html>

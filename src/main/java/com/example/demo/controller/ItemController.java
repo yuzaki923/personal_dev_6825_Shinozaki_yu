@@ -8,7 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.entity.Baditems;
 import com.example.demo.entity.Item;
+import com.example.demo.model.Account;
+import com.example.demo.repository.BaditemsRepository;
 import com.example.demo.repository.ItemRepository;
 
 @Controller
@@ -16,6 +19,12 @@ public class ItemController {
 
 	@Autowired
 	ItemRepository itemRepository;
+
+	@Autowired
+	Account account;
+
+	@Autowired
+	BaditemsRepository baditemsRepository;
 
 	@GetMapping("/items")
 	public String index(
@@ -32,6 +41,26 @@ public class ItemController {
 
 		return "items";
 
+	}
+
+	@GetMapping("/baditems")
+	public String bad(
+			@RequestParam(value = "categoryId", defaultValue = "") Integer categoryId,
+			Model model) {
+
+		List<Baditems> itemList = null;
+
+		itemList = baditemsRepository.findAll();
+
+		model.addAttribute("baditems", itemList);
+
+		return "baditems";
+
+	}
+
+	@GetMapping("/PurchaseHistory")
+	public String Purchase(Model model) {
+		return "PurchaseHistory";
 	}
 
 }

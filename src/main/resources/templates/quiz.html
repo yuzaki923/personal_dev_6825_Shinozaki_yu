@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>クイズ</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<p class="sample">
+		<img src="unnamed.jpg" alt="picture">
+		</p>
+      <p>この動物はなんという名前でしょう</p>
+      <form action="/quiz" method="post">
+       <input name="answer" type="radio" value="a"checked/>イリナキウサギ</input>
+      <input name="answer" type="radio" value="b">センザンコウ</input>
+      <input name="answer" type="radio" value="c">フォッサ</input>
+      
+		  
+      <button class="btn">回答する</button>
+      
+      <span th:utext="${message}" style="color: red">
+	  </span><br>
+	
+      </form>
+</body>
+</html>

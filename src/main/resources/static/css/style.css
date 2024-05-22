@@ -1,0 +1,422 @@
+/* 全体 */
+body {
+	background-color: #EFF0F7; /* 背景色  */
+	text-align: center; /* 中央寄せ */
+    min-width: 900px; /* 最小幅 */
+}
+
+ .left{
+      text-align: left;
+    }
+        .right{
+      text-align: right;
+    }
+    
+div.leftv img{
+	width: 270px;
+	position: absolute;
+	top: 550px;
+	z-index: 8;
+	left: 10px;
+}
+
+div.left img{
+	width: 270px;
+	position: fixed;
+	top: 250px;
+	z-index: 8;
+}
+
+div.right img{
+	width: 300px;
+	position: fixed;
+	top: 250px;
+	right: 20px;
+	z-index: 1;
+}
+
+div.left imga{
+	width: 300px;
+	position: fixed;
+	top: 150px;
+	z-index: 1;
+}
+
+div.right imga{
+	width: 300px;
+	position: fixed;
+	top: 150px;
+	right: 20px;
+	z-index: 0;
+}
+
+img {
+	width: 100px;
+}
+
+div.a img {
+	width: 800px;
+}
+
+div.cp_slidewrapper img{
+	width: 150px;
+	object-fit: cover;
+}
+
+div.cp_slidewrapper imga{
+	width: 250px;
+	object-fit: cover;
+}
+
+p.sample img {
+	width: auto;
+}
+
+p.samplew img {
+	width: 400px;
+}
+
+p.samplei img{
+	width: 250px;
+	position: absolute;
+	right: 450px;
+	top: 100px;
+}
+
+p.sampley img{
+	width: 200px;
+	position: absolute;
+	right: 450px;
+	top: 100px;
+}
+
+imga {
+	width: 200px;
+}
+ul {
+  display: flex;
+  margin: auto;
+}
+
+h1 {
+  position: relative;
+  line-height: 1.4;
+  padding:0.25em 1em;
+  display: inline-block;
+}
+
+h1:before, h1:after { 
+  content:'';
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+}
+
+h1:before {
+  border-left: solid 1px #ff5722;
+  border-top: solid 1px #ff5722;
+  top:0;
+  left: 0;
+}
+
+h1:after {
+  border-right: solid 1px #ff5722;
+  border-bottom: solid 1px #ff5722;
+  bottom:0;
+  right: 0;
+}
+/* ヘッダー、ナビゲーションメニュー、フッター */
+header, nav, footer {
+	background-color: #45496a; /* 背景色 */
+	color: #ffffff; /* 文字色 */
+	padding-top: 5px; /* 内側余白(上) */
+	padding-bottom: 5px; /* 内側余白(下) */
+}
+/* ヘッダー、ナビゲーション内リンク */
+header a, nav a {
+	color: #ffffff;
+}
+/* ヘッダー内見出し */
+header h1 {
+	font-size: 20pt;
+	margin: 10px auto;
+}
+
+/* 仕切り線 */
+hr {
+	border-top: 2px dashed #7d8bae;
+}
+/* メイン */
+main {
+	background-color: #FFFFFF;
+	min-height: 50px;
+	padding: 20px;
+}
+/* 表線 */
+table, th, td {
+	border-collapse: collapse;
+	border: 1px solid #7d8bae;
+}
+/* 表 */
+table {
+    margin: 5px auto;
+    min-width: 800px;
+}
+/* 表見出しセル */
+table th {
+	background: #7d8bae;
+	color: #ffffff;
+}
+/* 送信ボタン */
+a.btn_21 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 180px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.5s;
+	animation: move_c 1s infinite;
+}
+@keyframes move_c {
+    0% {transform: translate(0px, 0)}
+    50% {transform: translate(0px, 0) rotateZ(5deg)}
+}
+a.btn_21:hover {
+	color: #27acd9;
+	background: #fff;
+}
+/* 送信ボタン(マウスオーバー時) */
+button:hover {
+	background-color: #f1b2b2;
+}
+
+button.btn_22 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 200px;
+	margin: auto;
+	padding: 12px;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.5s;
+	animation: move_d 2s infinite;
+	box-shadow: 0 5px 0 rgb(6, 134, 178, 1);
+	position: relative;
+}
+button.btn_23 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 200px;
+	margin: 10px 930px;
+	padding: 12px;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	border-radius: 5px;
+	transition: 0.5s;
+	animation: move_d 2s infinite;
+	box-shadow: 0 5px 0 rgb(6, 134, 178, 1);
+	position: relative;
+}
+@keyframes move_d {
+    0% {box-shadow: 0 5px 0 rgb(6, 134, 178, 1); top: 0px;}
+    10% {box-shadow: 0 0 0 rgb(6, 134, 178, 1); top: 5px;}
+    20% {box-shadow: 0 5px 0 rgb(6, 134, 178, 1); top: 0px;}
+    30% {box-shadow: 0 0 0 rgb(6, 134, 178, 1); top: 5px;}
+    40% {box-shadow: 0 5px 0 rgb(6, 134, 178, 1); top: 0px;}
+}
+button.btn_22:hover {
+	color: #27acd9;
+	background: #fff;
+	border: 2px solid #0686b2;
+}
+
+button.btn_18  {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 220px;
+	margin: auto;
+	padding: 12px;
+	font-weight: bold;
+	background: linear-gradient(to top, rgb(5, 130, 174), #27acd9);
+	color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	transition: 0.5s;
+}
+a.btn_09:hover {
+	color: #fff;
+	opacity: 0.5;
+}
+.cp_breadcrumb *, .cp_breadcrumb *:after, .cp_breadcrumb *:before {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_breadcrumb {
+	margin: 1em auto;
+	padding: 1em 2em;
+	background-color: red;
+	color: #fff;
+	border-radius: 0.5em;
+	z-index: 4;
+}
+.cp_breadcrumb a {
+	text-decoration: none;
+	color: white;
+}
+.cp_breadcrumb .breadcrumbs {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cp_breadcrumb li {
+	display: inline-block;
+	position: relative;
+	padding-right: calc(16px + 8px);
+	margin-right: 8px;
+	color: #7986CB;
+}
+.cp_breadcrumb li::before {
+	content: '›';
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-align: center;
+	font-size: 1em;
+	color: inherit;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.cp_breadcrumb li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	color: #ffffff;
+}
+.cp_breadcrumb li:last-child::before {
+	content: normal;
+}
+  .fixed-div {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 100px;
+    overflow: auto;
+    border:1px solid #444444;
+    background-color:#EEEEEE;
+    z-index: 3;
+  }
+  
+  .cp_cssslider {
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+	margin: 2em auto;
+	border: 270px #ffffff;
+	width: 270px;
+	position: absolute;
+	top: 550px;
+	z-index: 8;
+	left: 10px;
+}
+.cp_slide_item {
+	width: 300px;
+	height: 200px;
+	float: left;
+	position: relative;
+	
+}
+.cp_slidewrapper {
+	width: 600%;/* slideの枚数×100% */
+	position: relative;
+	left: 0;
+	animation: slider 20s infinite ease;/* スピード */
+}
+@-webkit-keyframes slider {
+	/* 100%を枚数で割った%に割り振る */
+	0% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	}
+	20% {
+	-webkit-transform: translateX(-300px);
+	transform: translateX(-300px);
+	}
+	40% {
+	-webkit-transform: translateX(-600px);
+	transform: translateX(-600px);
+	}
+	60% {
+	-webkit-transform: translateX(-900px);
+	transform: translateX(-900px);
+	}
+	80% {
+	-webkit-transform: translateX(-1200px);
+	transform: translateX(-1200px);
+	}
+	100% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	}
+}
+@keyframes slider {
+	/* 100%を枚数で割った%に割り振る */
+	0% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	}
+	20% {
+	-webkit-transform: translateX(-300px);
+	transform: translateX(-300px);
+	}
+	40% {
+	-webkit-transform: translateX(-600px);
+	transform: translateX(-600px);
+	}
+	60% {
+	-webkit-transform: translateX(-900px);
+	transform: translateX(-900px);
+	}
+	80% {
+	-webkit-transform: translateX(-1200px);
+	transform: translateX(-1200px);
+	}
+	100% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	}
+}
+
+
+.text{
+color: black;
+position: absolute;/*自由に配置したい要素に記入*/
+right: 1330px;/*親要素の右から20pxに配置*/
+top: 750px;/*親要素の上から20oxに配置*/
+}
+
+
