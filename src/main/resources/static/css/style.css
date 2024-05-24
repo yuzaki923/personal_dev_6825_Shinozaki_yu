@@ -23,15 +23,31 @@ div.leftv img{
 div.left img{
 	width: 270px;
 	position: fixed;
-	top: 250px;
+	top: 200px;
 	z-index: 8;
 }
 
 div.right img{
 	width: 300px;
 	position: fixed;
-	top: 250px;
+	top: 170px;
 	right: 20px;
+	z-index: 1;
+}
+
+div.rightA img{
+	width: 300px;
+	position: absolute;
+	top: 400px;
+	right: 20px;
+	z-index: 1;
+}
+
+div.leftA img{
+	width: 300px;
+	position: absolute;
+	top: 400px;
+	left: 20px;
 	z-index: 1;
 }
 
@@ -252,7 +268,23 @@ button.btn_18  {
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	width: 220px;
+	width: 230px;
+	margin: auto;
+	padding: 12px;
+	font-weight: bold;
+	background: linear-gradient(to top, rgb(5, 130, 174), #27acd9);
+	color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	transition: 0.5s;
+}
+
+button.btn_15  {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
 	margin: auto;
 	padding: 12px;
 	font-weight: bold;
@@ -323,7 +355,7 @@ a.btn_09:hover {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 320px;
+    width: 230px;
     height: 100px;
     overflow: auto;
     border:1px solid #444444;
@@ -339,7 +371,7 @@ a.btn_09:hover {
 	border: 270px #ffffff;
 	width: 270px;
 	position: absolute;
-	top: 550px;
+	top: 390px;
 	z-index: 8;
 	left: 10px;
 }

@@ -20,6 +20,7 @@
 	<li>Contents</li>
 	</ul>
 </div>
+
 		<table>
 			<tr>
 				<th>NO</th>
@@ -36,13 +37,14 @@
 				<td th:text="${item.name}"></td>
 				<td th:text="${item.price}"></td>
 				<td>
-					<form action="/cart/add" method="post">
+					<form action="/cart/add" method="Post">
 					<input type="hidden" name="itemId" th:value="${item.id}">
-					<button href="" class="btn_18">カートに追加</button>
+					<button href="" class="btn_15">カートに追加</button>
 					</form>
 				</td>
 			</tr>
 		</table>
+		
 		<form action="/quiz1" method="get">
 			<button class="fixed-div">
 <p>クイズに答えて</p>
@@ -53,22 +55,14 @@
 	<hr>
 	
 	<footer th:replace="footer"></footer>
-	<div class="cp_cssslider">
-	<div class="cp_slidewrapper">
-		<div class="cp_slide_item"><img src="ダウンロード.jpg"></div>
-		<div class="cp_slide_item"><img src="910InuA1PIL.jpg" style="width: 300px;"></div>
-		<div class="cp_slide_item"><img src="709892.jpg" style="width: 300px;"></div>
-		<div class="cp_slide_item"><img src="images.jpg" style="width: 300px;"></div>
-		<div class="cp_slide_item"><img src="20231124-273294-header2.jpg" style="width: 300px;"></div>
+	<div class="leftA">
+	<img src="6e036096-f3bb-4cce-8b49-5af2db9991a4-1_all_5502-removebg-preview.png" style="width: 220px;">
 	</div>
-</div>
 
 <div class="right">
-	<img src="typhroywi2zusbl1716280448.png">
+	<img src="typhroywi2zusbl1716280448.png" style="width: 230px;">
 	</div>
-<div class="box">
-<span class="text"><h2>龍が如く</h2></span>
-</div>
+
 
 </body>
 </html>

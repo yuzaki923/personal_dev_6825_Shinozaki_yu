@@ -10,6 +10,10 @@
 	<main>
 		<h3>お客様情報</h3>
 		<form action="/customerAdd" method="post">
+			<div class="left">
+  <img src="--unscreen__2_.gif">
+</div>
+			
 			
 			<ul th:if="${errorList}" class="error">
 				<li th:each="error:${errorList}" th:text="${error}"></li>
@@ -48,6 +52,7 @@
 				</tr>
 			</table>
 			<button class="btn_22">登録</bottun>
+	
 	</main>
 	</form>
 	<hr>

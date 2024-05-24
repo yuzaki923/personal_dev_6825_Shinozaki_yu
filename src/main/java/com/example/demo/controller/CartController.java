@@ -25,6 +25,21 @@ public class CartController {
 		return "cart";
 	}
 
+	@GetMapping("/cart/add")
+	public String addCart1(
+			@RequestParam("itemId") int itemId,
+			@RequestParam(name = "quantity", defaultValue = "1") Integer quantity) {
+
+		// 商品コードをキーに商品情報を取得する
+		Item item = itemRepository.findById(itemId).get();
+		// 商品オブジェクトに個数をセット
+		item.setQuantity(quantity);
+		// カートに追加
+		cart.add(item);
+		// 「/cart」にリダイレクト
+		return "redirect:/cart";
+	}
+
 	// 指定した商品をカートに追加する
 	// 数量が未指定の場合は1とする
 	@PostMapping("/cart/add")

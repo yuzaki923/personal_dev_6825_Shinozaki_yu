@@ -13,10 +13,32 @@
 		<div class="cp_breadcrumb">
 	<ul class="breadcrumbs">
 	<li><a href="/items">Home</a></li>
-	<li><a href="#">Help</a></li>
-	<li><a href="#">お問い合わせ</a></li>
+	<li><a href="/PurchaseHistory">購入履歴</a></li>
+	<li><a href="/cart">カートの中身を見る</a></li>
 	<li>Contents</li>
 	</ul>
+</div>
+	<div class="cp_cssslider">
+	<div class="cp_slidewrapper">
+		<div class="cp_slide_item"><img src="/ダウンロード.jpg"></div>
+		<div class="cp_slide_item"><img src="/910InuA1PIL.jpg" style="width: 300px;"></div>
+		<div class="cp_slide_item"><img src="/709892.jpg" style="width: 300px;"></div>
+		<div class="cp_slide_item"><img src="/images.jpg" style="width: 300px;"></div>
+		<div class="cp_slide_item"><img src="/20231124-273294-header2.jpg" style="width: 300px;"></div>
+	</div>
+</div>
+
+
+<p th:text="${e}" style="color: red;"></p>
+
+
+<div class="box">
+<a href="/cart/add?itemId=5"><span class="text"style="top: 600px;"><h2>龍が如く</h2></span></a>
+</div>
+
+
+<div class="rightA">
+  <img src="/img20200118192938-removebg-preview.png">
 </div>
 
 		<span th:replace="cartItem"></span>
@@ -31,10 +53,10 @@
 		<form action="/items" methods="get">
 			<button class="btn_22">追加</bottun>
 		</form>
+		
+	
 					
-<div class="right">
-  <img src="img20200118192938-removebg-preview.png">
-</div>
+
 	</main>
 	<hr>
 	<footer th:replace="footer"></footer>

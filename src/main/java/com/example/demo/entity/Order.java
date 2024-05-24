@@ -41,4 +41,16 @@ public class Order {
 	public Integer getId() {
 		return id;
 	}
+
+	public Integer getCustomerId() {
+		return customerId;
+	}
+
+	public LocalDate getOrderedOn() {
+		return orderedOn;
+	}
+
+	public Integer getTotalPrice() {
+		return totalPrice;
+	}
 }

@@ -13,14 +13,22 @@
 	<img src="schipperke_hair.jpg"></p>
 	</ul>
       <p>この犬はなんという種類でしょう</p>
+      
        <form action="/quiz1" method="post">
        <input name="answer" type="radio" value="a">エアデール・テリア</input>
-      <input name="answer" type="radio" value="b">スキッパーキ</input>
+      <input name="answer" type="radio" value="b"checked/>スキッパーキ</input>
       <input name="answer" type="radio" value="c">ビションフリーゼ</input>
       
       <button class="btn">回答する</button>
       <span th:utext="${message}" style="color: red">
 	  </span><br>
 	  </form>
+	  
+	  <form action="/items" method="get">
+			<button class="fixed-div">
+<p>アイテムリストへ戻る</p>
+</button>
+</form>
+	  
 </body>
 </html>

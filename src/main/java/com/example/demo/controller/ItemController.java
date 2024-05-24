@@ -11,11 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.entity.Baditems;
 import com.example.demo.entity.Item;
 import com.example.demo.model.Account;
+import com.example.demo.model.Cart;
 import com.example.demo.repository.BaditemsRepository;
 import com.example.demo.repository.ItemRepository;
 
 @Controller
 public class ItemController {
+
+	@Autowired
+	Cart cart;
 
 	@Autowired
 	ItemRepository itemRepository;
@@ -56,11 +60,6 @@ public class ItemController {
 
 		return "baditems";
 
-	}
-
-	@GetMapping("/PurchaseHistory")
-	public String Purchase(Model model) {
-		return "PurchaseHistory";
 	}
 
 }

@@ -33,8 +33,9 @@ public class AccountController {
 	@Autowired
 	CustomerRepository customerRepository;
 
-	@GetMapping("/login") //ログイン処理
+	@GetMapping({ "/login", "/logout" }) //ログイン処理
 	public String index(Model model) {
+		session.invalidate();
 		return "/login";
 	}
 
@@ -109,7 +110,7 @@ public class AccountController {
 		List<Customer> customerList = customerRepository.findByEmail(email);
 		if (customerList != null && customerList.size() > 0) {
 			// 登録済みのメールアドレスが存在した場合
-			errorList.add("登録済みのメールアドレスです");
+			errorList.add("登録済みのメールアドレス、またはパスワードです");
 		}
 		if (pass.length() == 0) {
 			errorList.add("パスワードは必須です");

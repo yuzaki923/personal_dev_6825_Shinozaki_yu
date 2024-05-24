@@ -14,7 +14,7 @@
 	</ul>
       <p>この猫はなんという種類でしょう</p>
        <form action="/quiz2" method="post">
-       <input name="answer" type="radio" value="a">ノルウェージャンフォレストキャット</input>
+       <input name="answer" type="radio" value="a"checked/>ノルウェージャンフォレストキャット</input>
       <input name="answer" type="radio" value="b">サイベリアン</input>
       <input name="answer" type="radio" value="c">スコティッシュフォールド</input>
       
@@ -22,5 +22,12 @@
       <span th:utext="${message}" style="color: red">
 	  </span><br>
 	  </form>
+	  
+	  <form action="/items" method="get">
+			<button class="fixed-div">
+<p>アイテムリストへ戻る</p>
+</button>
+</form>
+
 </body>
 </html>

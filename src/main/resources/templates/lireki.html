@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ショッピングメニュー</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+		
+<div class="bg_pattern Polka_v2"></div>
+	<h1>ようこそ！<span th:text="${@account.name}+' さん！'"></span></h1>
+	<header th:replace="header"></header>
+	<hr>
+	<main>
+		<div class="cp_breadcrumb">
+	<ul class="breadcrumbs">
+	<li><a href="/items">Home</a></li>
+	<li><a href="/PurchaseHistory">購入履歴</a></li>
+	<li><a href="/cart">カートの中身を見る</a></li>
+	<li>Contents</li>
+	</ul>
+</div>
+
+
+
+<table border="1">
+	<tr>
+		<th>注文番号</th>
+		<th>商品名</th>
+		<th>購入金額</th>
+	</tr>
+
+			<tr th:each="lireki:${lirekis}">
+				<td th:text="${lireki.id}"></td>
+				<td th:text="${lireki.name}"></td>
+				<td th:text="${lireki.price}"></td>
+	</tr>
+	
+	
+</table>
+
+</main>
+</body>
+</html>

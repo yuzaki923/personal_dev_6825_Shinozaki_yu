@@ -42,7 +42,12 @@ public class OrderController {
 	// 注文内容確認とお客様情報入力画面を表示
 	@GetMapping("/order")
 	public String index(Model model) {
-
+		if (cart.getTotalPrice() == 0) {
+			String e;
+			e = "カートに商品がありません";
+			model.addAttribute("e", e);
+			return "/cart";
+		}
 		//customerRepository.save(customer);
 		return "order";
 	}
@@ -63,7 +68,7 @@ public class OrderController {
 		return "orderConfirm";
 	}
 
-	@GetMapping("/ordered")
+	@GetMapping("/ordered") //個々の情報を呼び出す
 	public String doOrder(Model model) {
 		Order order = new Order(
 				account.getId(),

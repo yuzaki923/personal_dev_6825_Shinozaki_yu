@@ -2,15 +2,53 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>購入履歴</title>
+<title>ショッピングメニュー</title>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h1>購入履歴</h1>
-	<span th:replace="cartItem"></span>
 		
-	</main>
+<div class="bg_pattern Polka_v2"></div>
+	<h1>ようこそ！<span th:text="${@account.name}+' さん！'"></span></h1>
+	<header th:replace="header"></header>
 	<hr>
-	<footer th:replace="footer"></footer>
+	<main>
+		<div class="cp_breadcrumb">
+	<ul class="breadcrumbs">
+	<li><a href="/items">Home</a></li>
+	<li><a href="/PurchaseHistory">購入履歴</a></li>
+	<li><a href="/cart">カートの中身を見る</a></li>
+	<li>Contents</li>
+	</ul>
+</div>
+
+
+
+<table border="1">
+	<tr>
+		<th>注文番号</th>
+		<th>顧客ID</th>
+		<th>購入日時</th>
+		<th>購入金額</th>
+	</tr>
+
+			<tr th:each="order:${orders}">
+				<td><a th:href="@{/ParchaseDetail/{id}(id = ${order.id})}"th:text="${order.id}"></td>
+				<td th:text="${order.customerId}"></td>
+				<td th:text="${order.orderedOn}"></td>
+				<td th:text="${order.totalPrice}"></td>
+	</tr>
+	
+	
+</table>
+
+</main>
 </body>
 </html>
+<!--
+４,3で取得したデータをmodel.Attでhtmlに出力する
+5,この画面を修正する
+2,ControllerでOrderRepositoryを呼び出す（find○○）
+1,repositoryとControllerをつくるfindby○○の形で作るなら、ItemRepositoryが参考になる
+3,2を基に2で取得したでーたを基にorderdetailRepositoryを呼び出す。
+
+-->
